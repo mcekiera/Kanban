@@ -6,6 +6,7 @@ function Card(id, stringified) {
 		content = JSON.parse(stringified);
 
 	} catch(err) {
+		console.log(err)
 		content = {
 			"title": 'error',
 			"desc": 'error',
@@ -13,6 +14,7 @@ function Card(id, stringified) {
 	}
 
 	this.id = id;
+	this.name = stringified;
 	this.title = content.title;
 	this.description = content.desc;
 	this.priority = content.priority;
@@ -20,7 +22,7 @@ function Card(id, stringified) {
 	this.$element = createCard();
 
 	function createCard() {
-		var $card = $('<li>').addClass('card priority-' + self.priority);
+		var $card = $('<li>').addClass('card priority-' + self.priority).attr('id',id);
 		var $cardTitle = $('<p role="button" data-toggle="collapse" href="#desc' + self.id + '"  aria-expanded="false" aria-controls="collapseExample">').addClass('card-title').text(self.title);
 		var $cardDescription = $('<p id="desc' + self.id + '">').addClass('card-description collapse').text(self.description);
 		var $cardDelete = $('<button>').addClass('btn-delete  btn btn-warning').append('<i class="glyphicon glyphicon-remove"></i>');
@@ -32,6 +34,7 @@ function Card(id, stringified) {
 
 		return $card;
 	}
+	Card.stash[id] = self;
 }
 
 Card.prototype = {
@@ -46,3 +49,5 @@ Card.prototype = {
 		});
 	}
 };
+
+Card.stash = {};

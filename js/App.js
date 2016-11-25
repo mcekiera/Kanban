@@ -4,6 +4,7 @@
 		'X-Client-Id': 114,
 		'X-Auth-Token' : '64ade12026dd1cf2043e88a8ee158cd8'
 	};
+	var isSafari = navigator.userAgent.indexOf("Safari") != -1;
 
 	$.ajaxSetup({ headers: myHeaders });
 
@@ -27,3 +28,5 @@
 			col.addCard(card);
 		})
 	}
+
+
