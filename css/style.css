@@ -1,0 +1,99 @@
+* {
+	box-sizing: border-box; }
+
+ul,
+li {
+	margin: 0;
+	padding: 0; }
+
+ul {
+	display: inline-block;
+	list-style: none; }
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	min-height: 100vh;
+	background-color: #ffcc66; }
+
+.column-container {
+	border-radius: inherit;
+	display: flex;
+	flex-direction: row; }
+
+.board {
+	background-color: #ffcc66;
+	border-radius: 20px;
+	height: 100vh;
+	min-width: 100%;
+	text-align: center;
+	width: 100%; }
+
+.column {
+	background-color: #ffffcc;
+	border-radius: inherit;
+	padding: 10px;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	float: left;
+	margin: 5px;
+	min-height: 90vh;
+	position: relative; }
+
+.card {
+	border-radius: inherit;
+	margin-top: 10px;
+	min-height: 100px;
+	position: relative; }
+.card p {
+	white-space: pre-wrap; }
+
+.card-placeholder {
+	background: transparent;
+	margin: 10px;
+	min-height: 100px;
+	position: relative;
+	border: 1px dashed #ffcc66; }
+
+.column-card-list {
+	background-color: #ffffcc;
+	border-radius: inherit;
+	margin: 10px;
+	min-height: 120px;
+	position: relative; }
+
+.btn-delete {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0 2px; }
+
+.btn-default,
+.btn-primary {
+	text-transform: uppercase;
+	font-weight: 700; }
+
+.card-title {
+	padding-top: 20px;
+	margin: 0;
+	font-size: 30px; }
+
+.card-description {
+	padding: 10px 30px;
+	text-align: left; }
+
+.priority-low {
+	background-color: #ccff99; }
+.priority-middle {
+	background-color: #ffff99; }
+.priority-high {
+	background-color: #ffcc99; }
+.priority-asap {
+	background-color: #ff0000; }
+
+.modal-content {
+	background-color: #ffffcc; }
+
+.board-title h1 {
+	font-family: 'Fredoka One', cursive;
+	font-size: 77px; }

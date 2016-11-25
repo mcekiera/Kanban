@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Kanban</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans" rel="stylesheet">
+</head>
+<body>
+<div id="board" class="board">
+    <div class="board-title">
+        <h1>Kanban</h1>
+        <button class="create-column btn btn-default">Dodaj kolumnę</button>
+    </div>
+    <div class="column-container"></div>
+</div>
+
+<!-- MODAL -->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Dodaj kartę</h4>
+            </div>
+            <div class="modal-body form">
+                <div class="form-group">
+                    <label for="bs-modal-title">Tytuł:</label>
+                    <input type="text" class="form-control" id="bs-modal-title">
+                </div>
+                <div class="form-group">
+                    <label for="bs-modal-comment">Opis:</label>
+                    <textarea class="form-control" rows="3" id="bs-modal-comment"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="bs-modal-select">Priorytet:</label>
+                    <select class="form-control" id="bs-modal-select">
+                        <option>Niski</option>
+                        <option>Średni</option>
+                        <option>Wysoki</option>
+                        <option>ASAP</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
+                <button type="button" class="btn btn-primary" id="bs-modal-addCard">Dodaj</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"
+        integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
+        integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/Column.js"></script>
+<script type="text/javascript" src="js/Card.js"></script>
+<script type="text/javascript" src="js/Board.js"></script>
+<script type="text/javascript" src="js/App.js"></script>
+
+</body>
+</html>
